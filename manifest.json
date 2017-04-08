@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Youtube Explicit Video Skipper",
+  "description": "This extension skips explicit videos in a Youtube playlist",
+  "version": "1.0",
+  "author" : "huwcbjones",
+
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches" : ["*://www.youtube.com/watch*"],
+      "js" : ["contentscript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "skipper.js"
+  ]
+}
